@@ -425,6 +425,41 @@ $(function () {
                     
 
                     
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fa fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: JSON.parse('[{"name":"无名之辈","artist":"陈雪燃","url":"https://music.163.com/song?id=1376142151&userid=1362623506","cover":"https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=3feed41972d98d1062d904634056d36b/8d5494eef01f3a293cc6972b9725bc315d607ccc.jpg"}]')
+    });
+});
+</script>
+                    
 
                     
 
@@ -461,8 +496,12 @@ $(function () {
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                B&#x7AD9;&#x6559;&#x5B66;&#x89C6;&#x9891;&#x94FE;&#x63A5;
-&#x4E0D;&#x8FC7;&#x89C6;&#x9891;&#x662F;&#x57FA;&#x4E8E;mac&#x
+                                B站教学视频链接
+不过视频是基于mac的，这篇文章是基于window
+遇到视频没有出现的bug，已经解决了
+具体流程
+注册github取昵称是注意，这个昵称关乎你的网站的地址  
+下载node.js和git，node很好下载，但是git要注
                             
                         </div>
                         <div class="publish-info">
@@ -533,7 +572,7 @@ $(function () {
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">1k</span>
+                <span class="white-color">962</span>
             
 
             
