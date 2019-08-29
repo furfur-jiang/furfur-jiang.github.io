@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>解决npm被墙问题</title>
+      <link href="/2019/08/29/jie-jue-npm-bei-qiang-wen-ti/"/>
+      <url>/2019/08/29/jie-jue-npm-bei-qiang-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<h1 id="解决npm别墙问题"><a href="#解决npm别墙问题" class="headerlink" title="解决npm别墙问题"></a>解决npm别墙问题</h1><p>npm存储包文件的服务器在国外，会被墙，速度慢。</p><p>如果npm的服务器在中国就好了，所以淘宝团队干了这事。</p><p>来自官网：“这是一个完整npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟<br>一次以保证尽量与官方服务同步。”官方网址：<a href="https://npm.taobao.org" target="_blank" rel="noopener">淘宝镜像源</a></p><p>这里提供三种方法</p><h2 id="第一种下载淘宝镜像源"><a href="#第一种下载淘宝镜像源" class="headerlink" title="第一种下载淘宝镜像源"></a>第一种下载淘宝镜像源</h2><p>淘宝cnpm  <a href="http://npm.taobao.org/" target="_blank" rel="noopener">淘宝镜像</a> ， 安装淘宝cnpm，global全局下载 ，命令行输入如下， 以后安装包之前把npm转换为cnpm   </p><pre><code>npm install --global cnpm</code></pre><h2 id="第二种利用淘宝镜像源链接下载"><a href="#第二种利用淘宝镜像源链接下载" class="headerlink" title="第二种利用淘宝镜像源链接下载"></a>第二种利用淘宝镜像源链接下载</h2><p>如果不想安装<code>cnpm</code>又想使用淘宝服务器的话可以直接执行下面代码下载jQuery（例子）</p><pre><code class="shell">npm install jquery --registry=https://registry.npm.taobao.org</code></pre><h2 id="第三种直接配置文件（最简单）"><a href="#第三种直接配置文件（最简单）" class="headerlink" title="第三种直接配置文件（最简单）"></a>第三种直接配置文件（最简单）</h2><p>执行下面这行代码即可</p><pre><code>npm config set registry http://registry.npm.taobao.org</code></pre><p>查看npm配置信息 <code>npm config list</code>    看registry即可 如下即成功</p><pre><code> registry = "http://registry.npm.taobao.org/"</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> npm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> npm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo+github搭建个人博客（超详细图解）</title>
       <link href="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/"/>
       <url>/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/</url>
@@ -11,19 +36,18 @@
         <content type="html"><![CDATA[<h1 id="hexo-github搭建个人博客（超详细图解）"><a href="#hexo-github搭建个人博客（超详细图解）" class="headerlink" title="hexo+github搭建个人博客（超详细图解）"></a>hexo+github搭建个人博客（超详细图解）</h1><p><a href="https://www.bilibili.com/video/av44544186?from=search" target="_blank" rel="noopener">B站教学视频链接</a></p><p>不过视频是基于mac的，这篇文章是基于window</p><p>遇到视频没有出现的bug，已经解决了</p><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ol><li>注册github取昵称是注意，这个昵称关乎你的网站的地址  <a href="https://github.com/" target="_blank" rel="noopener"></a></li><li>下载node.js和git，node很好下载，但是git要注意，参考这篇文章下载 <a href="https://www.cnblogs.com/zlslch/p/7985285.html" target="_blank" rel="noopener">详细解释</a>，也是很容易的</li><li>通过命令行工具进行操作</li><li>安装hexo框架</li><li>利用hexo生成博客</li><li>github创建仓库，确定地址</li><li>hexo部署到远端</li></ol><h2 id="下载node-js"><a href="#下载node-js" class="headerlink" title="下载node.js"></a>下载node.js</h2><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">nodejs下载网站</a></p><p>下载完直接一直下一步安装就可以</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1.png" alt="图片"></p><h2 id="下载git"><a href="#下载git" class="headerlink" title="下载git"></a>下载git</h2><p>git安装教程  <a href="https://www.cnblogs.com/zlslch/p/7985285.html" target="_blank" rel="noopener">详细解释</a></p><h2 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h2><p><code>window+R</code>，输入cmd打开命令行工具</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566971400045.png" alt=""></p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566971454384.png" alt=""></p><p>看到以上内容即安装node成功（版本可能不同）</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566971526234.png" alt=""></p><p>看到以上内容即安装npm成功（版本可能不同）</p><p>需要npm下载，但是npm是国外的，可能被墙，速度较慢，可以通过下载淘宝镜像源加快速度，也可以不用，具体方法参照。。。</p><h2 id="全局安装hexo框架"><a href="#全局安装hexo框架" class="headerlink" title="全局安装hexo框架"></a>全局安装hexo框架</h2><p>命令行工具输入<code>npm install -g hexo-cli</code></p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566971744555.png" alt=""></p><p>安装成功如下</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566971789413.png" alt=""></p><p>通过<code>hexo -v</code>验证成功</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566971858635.png" alt=""></p><p>建立一个空的文件夹(可以自己指定目录) <code>mkdir blog</code>，我指定在d目录下建</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566974119628.png" alt=""></p><h2 id="使用hexo生成博客"><a href="#使用hexo生成博客" class="headerlink" title="使用hexo生成博客"></a>使用hexo生成博客</h2><p>用管理员权限打开命令行工具</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566973948330.png" alt=""></p><p>然后<strong>进入你建立的blog目录</strong>，输入<code>hexo init</code></p><p>如果没有报错，正常情况下就开心下载博客框架了，我第一次就是这样</p><p>如果报错如下</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566972452889.png" alt=""></p><p>就是没有 cd 进入blog 目录，输入<code>cd blog</code>即可</p><p>hexo博客安装完成</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566976925461.png" alt=""></p><p>hexo博客自动生成的东西</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566977039979.png" alt=""></p><h2 id="开启博客"><a href="#开启博客" class="headerlink" title="开启博客"></a>开启博客</h2><p>输入<code>hexo s</code></p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566977100757.png" alt=""></p><p>打开浏览器<code>http://localhost:4000</code>预览</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566977197218.png" alt=""></p><p>结束预览 ctrl+c 两次</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566977291046.png" alt=""></p><h2 id="部署到github上"><a href="#部署到github上" class="headerlink" title="部署到github上"></a>部署到github上</h2><p>登录你的github，点击右上角的+，new repository</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566977489239.png" alt=""></p><p><strong>注意用户部署个人博客的github仓库的命名必须符合特定要求才行</strong></p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566977625306.png" alt=""></p><p><strong>配置文件</strong></p><p>在blog打开_config.yml，可以记事本打开，地址是你的仓库地址，复制仓库地址</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566979516095.png" alt=""></p><p>在最底部找到图片相同内容，在deploy输入如下，注意千万不要忘记冒号后面空格，否则报错</p><pre><code># Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy:  type: git  repo: https://github.com/furfur-jiang/furfur-jiang.github.io.git  branch: master![1566979358505](hexo-github搭建个人博客（超详细图解）/1566979358505.png)</code></pre><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566979719335.png" alt=""></p><h2 id="将hexo推送到远端"><a href="#将hexo推送到远端" class="headerlink" title="将hexo推送到远端"></a>将hexo推送到远端</h2><p>正常情况下，再输入<code>hexo d</code>就可以进行了</p><p>但是如果不顺利，遇到下面的情况，也是很好解决的</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566980198147.png" alt=""></p><p>解决方法：</p><p>在下面补充你的个人信息，注册github邮箱和github的昵称</p><pre><code>D:\blog&gt; git config --global user.email "2282995214@qq.com"D:\blog&gt;git config --global user.name "furfur-jiang"</code></pre><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566980373027.png" alt=""></p><p>然后弹出一个github的登录窗口，输入内容登录即可</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566980134940.png" alt=""></p><p>最后再次 <code>hexo d</code>即可，然后可以打开你的浏览器，输入你的网站就可以</p><p>例如我的hexo <a href="https://furfur-jiang.github.io/" target="_blank" rel="noopener">https://furfur-jiang.github.io/</a>  把昵称换了就可以</p><p>预览</p><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566980553091.png" alt=""></p><p>完成啦啦啦！</p><p>样式的调整等我以后再出啦</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/08/28/hello-world/"/>
-      <url>/2019/08/28/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new "My New Post"</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
       
       
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
