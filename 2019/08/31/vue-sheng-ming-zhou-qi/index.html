@@ -4,10 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="解决npm被墙问题, furfur">
-    <meta name="description" content="解决npm别墙问题npm存储包文件的服务器在国外，会被墙，速度慢。
-如果npm的服务器在中国就好了，所以淘宝团队干了这事。
-来自官网：“这是一个完整npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟一次以保证">
+    <meta name="keywords" content="Vue实例的生命周期, furfur">
+    <meta name="description" content="vue实例的生命周期生命周期概念从Vue实例创建、运行、到销毁期间，总是伴随着各种各样的事件，这些事件，统称为生命周期！生命周期钩子 = 生命周期函数 = 生命周期事件
+主要的生命周期函数分类创建期间的生命周期函数
+beforeCreate">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>解决npm被墙问题 | furfur</title>
+    <title>Vue实例的生命周期 | furfur</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -262,13 +262,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        解决npm被墙问题
+                        Vue实例的生命周期
                     </div>
                 </div>
             </div>
@@ -379,8 +379,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/npm/" target="_blank">
-                                <span class="chip bg-color">npm</span>
+                            <a href="/tags/vue/" target="_blank">
+                                <span class="chip bg-color">vue</span>
                             </a>
                         
                     </div>
@@ -391,8 +391,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/npm/" class="post-category" target="_blank">
-                                npm
+                            <a href="/categories/vue/" class="post-category" target="_blank">
+                                vue
                             </a>
                         
                     </div>
@@ -403,21 +403,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-29
+                    2019-08-31
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        327
+                        562
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                     
                 
@@ -433,16 +433,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="解决npm别墙问题"><a href="#解决npm别墙问题" class="headerlink" title="解决npm别墙问题"></a>解决npm别墙问题</h1><p>npm存储包文件的服务器在国外，会被墙，速度慢。</p>
-<p>如果npm的服务器在中国就好了，所以淘宝团队干了这事。</p>
-<p>来自官网：“这是一个完整npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟<br>一次以保证尽量与官方服务同步。”官方网址：<a href="https://npm.taobao.org" target="_blank" rel="noopener">淘宝镜像源</a></p>
-<p>这里提供三种方法</p>
-<h2 id="第一种下载淘宝镜像源"><a href="#第一种下载淘宝镜像源" class="headerlink" title="第一种下载淘宝镜像源"></a>第一种下载淘宝镜像源</h2><p>淘宝cnpm  <a href="http://npm.taobao.org/" target="_blank" rel="noopener">淘宝镜像</a> ， 安装淘宝cnpm，global全局下载 ，命令行输入如下， 以后安装包之前把npm转换为cnpm   </p>
-<pre><code>npm install --global cnpm</code></pre><h2 id="第二种利用淘宝镜像源链接下载"><a href="#第二种利用淘宝镜像源链接下载" class="headerlink" title="第二种利用淘宝镜像源链接下载"></a>第二种利用淘宝镜像源链接下载</h2><p>如果不想安装<code>cnpm</code>又想使用淘宝服务器的话可以直接执行下面代码下载jQuery（例子）</p>
-<pre><code class="shell">npm install jquery --registry=https://registry.npm.taobao.org</code></pre>
-<h2 id="第三种直接配置文件（最简单）"><a href="#第三种直接配置文件（最简单）" class="headerlink" title="第三种直接配置文件（最简单）"></a>第三种直接配置文件（最简单）</h2><p>执行下面这行代码即可</p>
-<pre><code>npm config set registry http://registry.npm.taobao.org</code></pre><p>查看npm配置信息 <code>npm config list</code>    看registry即可 如下即成功</p>
-<pre><code> registry = "http://registry.npm.taobao.org/"</code></pre><script>
+                <h1 id="vue实例的生命周期"><a href="#vue实例的生命周期" class="headerlink" title="vue实例的生命周期"></a><a href="https://cn.vuejs.org/v2/guide/instance.html#实例生命周期" target="_blank" rel="noopener">vue实例的生命周期</a></h1><h2 id="生命周期概念"><a href="#生命周期概念" class="headerlink" title="生命周期概念"></a>生命周期概念</h2><p>从Vue实例创建、运行、到销毁期间，总是伴随着各种各样的事件，这些事件，统称为生命周期！生命周期钩子 = 生命周期函数 = 生命周期事件</p>
+<h2 id="主要的生命周期函数分类"><a href="#主要的生命周期函数分类" class="headerlink" title="主要的生命周期函数分类"></a>主要的生命周期函数分类</h2><h3 id="创建期间的生命周期函数"><a href="#创建期间的生命周期函数" class="headerlink" title="创建期间的生命周期函数"></a>创建期间的生命周期函数</h3><ul>
+<li><strong>beforeCreate</strong>：实例刚在内存中被创建出来，此时，还<strong>没有初始化好 data 和 methods 属性</strong></li>
+<li><strong>created</strong>：实例已经在内存中创建好了，<strong>data 和 methods 都已经被初始化好</strong>，如果要调用 methods 中的方法，或者操作 data 中的数据，最早，只能在 created 中操作，此时还没有开始 编译模板（即还未涉及el）</li>
+<li><strong>beforeMount</strong>：<strong>内存已经完成了模板的编译，但是还没有挂载到页面中</strong>，即尚未把模板渲染到 页面中，页面中的元素，还没有被真正替换过来，只是之前写的一些模板字符串，<code>$el</code> 属性目前不可见。（页面的还是旧的）</li>
+<li><strong>mounted</strong>：<strong>已经将编译好的模板，挂载到了页面指定的容器中显示</strong>，要通过某些插件操作页面上DOM节点，最早只能在这里进行</li>
+</ul>
+<h3 id="运行期间的生命周期函数"><a href="#运行期间的生命周期函数" class="headerlink" title="运行期间的生命周期函数"></a>运行期间的生命周期函数</h3><ul>
+<li><strong>beforeUpdate</strong>：状态更新之前执行此函数， 此时 <strong>data 中的状态值是最新的，但是界面上显示的数据还是旧的</strong>，因为此时还没有开始重新渲染DOM节点</li>
+<li><strong>updated</strong>：实例更新完毕之后调用此函数，此时 <strong>data 中的状态值 和 界面上显示的数据，都已经完成了更新</strong>，界面已经被重新渲染好了！</li>
+</ul>
+<h3 id="销毁期间的生命周期函数"><a href="#销毁期间的生命周期函数" class="headerlink" title="销毁期间的生命周期函数"></a>销毁期间的生命周期函数</h3><ul>
+<li><strong>beforeDestroy</strong>：实例销毁之前调用。在这一步，实例仍然完全可用。</li>
+<li><strong>destroyed</strong>：Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</li>
+</ul>
+<p><img src="/2019/08/31/vue-sheng-ming-zhou-qi/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%5Clifecycle.png" alt="lifecycle"></p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -618,9 +625,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《解决npm被墙问题》
+                    《Vue实例的生命周期》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/29/jie-jue-npm-bei-qiang-wen-ti/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/31/vue-sheng-ming-zhou-qi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 fur
             </a> 采用
@@ -661,7 +668,7 @@
         repo: 'furfur-jiang.github.io',
         owner: 'furfur-jiang',
         admin: null,
-        id: '2019-08-29T21-29-34',
+        id: '2019-08-31T13-51-39',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -682,9 +689,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/08/31/vue-sheng-ming-zhou-qi/">
                     <div class="card-image">
@@ -704,9 +712,9 @@ beforeCreate
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -719,6 +727,7 @@ beforeCreate
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -737,36 +746,33 @@ beforeCreate
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/">
+                <a href="/2019/08/29/jie-jue-npm-bei-qiang-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="hexo+github搭建个人博客（超详细图解）">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="解决npm被墙问题">
                         
-                        <span class="card-title">hexo+github搭建个人博客（超详细图解）</span>
+                        <span class="card-title">解决npm被墙问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            hexo+github搭建个人博客（超详细图解）B站教学视频链接
-不过视频是基于mac的，这篇文章是基于window
-遇到视频没有出现的bug，已经解决了
-具体流程
-注册github取昵称是注意，这个昵称关乎你的网站的地址  
-下载node
+                            解决npm别墙问题npm存储包文件的服务器在国外，会被墙，速度慢。
+如果npm的服务器在中国就好了，所以淘宝团队干了这事。
+来自官网：“这是一个完整npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟一次以保证
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-28
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category" target="_blank">
-                                    hexo
+                            <a href="/categories/npm/" class="post-category" target="_blank">
+                                    npm
                                 </a>
                             
                             
@@ -776,8 +782,8 @@ beforeCreate
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/" target="_blank">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/npm/" target="_blank">
+                        <span class="chip bg-color">npm</span>
                     </a>
                     
                 </div>

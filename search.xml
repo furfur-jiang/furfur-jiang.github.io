@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Vue实例的生命周期</title>
+      <link href="/2019/08/31/vue-sheng-ming-zhou-qi/"/>
+      <url>/2019/08/31/vue-sheng-ming-zhou-qi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="vue实例的生命周期"><a href="#vue实例的生命周期" class="headerlink" title="vue实例的生命周期"></a><a href="https://cn.vuejs.org/v2/guide/instance.html#实例生命周期" target="_blank" rel="noopener">vue实例的生命周期</a></h1><h2 id="生命周期概念"><a href="#生命周期概念" class="headerlink" title="生命周期概念"></a>生命周期概念</h2><p>从Vue实例创建、运行、到销毁期间，总是伴随着各种各样的事件，这些事件，统称为生命周期！生命周期钩子 = 生命周期函数 = 生命周期事件</p><h2 id="主要的生命周期函数分类"><a href="#主要的生命周期函数分类" class="headerlink" title="主要的生命周期函数分类"></a>主要的生命周期函数分类</h2><h3 id="创建期间的生命周期函数"><a href="#创建期间的生命周期函数" class="headerlink" title="创建期间的生命周期函数"></a>创建期间的生命周期函数</h3><ul><li><strong>beforeCreate</strong>：实例刚在内存中被创建出来，此时，还<strong>没有初始化好 data 和 methods 属性</strong></li><li><strong>created</strong>：实例已经在内存中创建好了，<strong>data 和 methods 都已经被初始化好</strong>，如果要调用 methods 中的方法，或者操作 data 中的数据，最早，只能在 created 中操作，此时还没有开始 编译模板（即还未涉及el）</li><li><strong>beforeMount</strong>：<strong>内存已经完成了模板的编译，但是还没有挂载到页面中</strong>，即尚未把模板渲染到 页面中，页面中的元素，还没有被真正替换过来，只是之前写的一些模板字符串，<code>$el</code> 属性目前不可见。（页面的还是旧的）</li><li><strong>mounted</strong>：<strong>已经将编译好的模板，挂载到了页面指定的容器中显示</strong>，要通过某些插件操作页面上DOM节点，最早只能在这里进行</li></ul><h3 id="运行期间的生命周期函数"><a href="#运行期间的生命周期函数" class="headerlink" title="运行期间的生命周期函数"></a>运行期间的生命周期函数</h3><ul><li><strong>beforeUpdate</strong>：状态更新之前执行此函数， 此时 <strong>data 中的状态值是最新的，但是界面上显示的数据还是旧的</strong>，因为此时还没有开始重新渲染DOM节点</li><li><strong>updated</strong>：实例更新完毕之后调用此函数，此时 <strong>data 中的状态值 和 界面上显示的数据，都已经完成了更新</strong>，界面已经被重新渲染好了！</li></ul><h3 id="销毁期间的生命周期函数"><a href="#销毁期间的生命周期函数" class="headerlink" title="销毁期间的生命周期函数"></a>销毁期间的生命周期函数</h3><ul><li><strong>beforeDestroy</strong>：实例销毁之前调用。在这一步，实例仍然完全可用。</li><li><strong>destroyed</strong>：Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</li></ul><p><img src="/2019/08/31/vue-sheng-ming-zhou-qi/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%5Clifecycle.png" alt="lifecycle"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>解决npm被墙问题</title>
       <link href="/2019/08/29/jie-jue-npm-bei-qiang-wen-ti/"/>
       <url>/2019/08/29/jie-jue-npm-bei-qiang-wen-ti/</url>
