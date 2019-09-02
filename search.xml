@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>bootstrap之bootstrap-select下拉多选框</title>
+      <link href="/2019/09/02/bootstrap-zhi-bootstrap-select-xia-la-duo-xuan-kuang/"/>
+      <url>/2019/09/02/bootstrap-zhi-bootstrap-select-xia-la-duo-xuan-kuang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="bootstrap之bootstrap-select下拉多选框"><a href="#bootstrap之bootstrap-select下拉多选框" class="headerlink" title="bootstrap之bootstrap-select下拉多选框"></a>bootstrap之bootstrap-select下拉多选框</h1><p><a href="https://github.com/snapappointments/bootstrap-select" target="_blank" rel="noopener">bootstrap-select的github链接</a></p><p>官网效果展示：</p><p><img src="https://user-images.githubusercontent.com/2874325/38997831-97e12bbe-43ab-11e8-85f5-b8c05d91c7b1.gif" alt=""></p><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="官网采用直接链接的方式"><a href="#官网采用直接链接的方式" class="headerlink" title="官网采用直接链接的方式"></a>官网采用直接链接的方式</h3><pre><code>&lt;!-- 导入bootstrap-select.min.css包 --&gt;&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/css/bootstrap-select.min.css"&gt;&lt;!-- 导入bootstrap-select.min.js包 --&gt;&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/js/bootstrap-select.min.js"&gt;&lt;/script&gt;&lt;!-- 编译为中文用defaults-zh_CN.min.js包 --&gt;&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/js/i18n/defaults-zh_CN.min.js"&gt;&lt;/script&gt;</code></pre><h3 id="npm下载方式导包"><a href="#npm下载方式导包" class="headerlink" title="npm下载方式导包"></a>npm下载方式导包</h3><p>在指定文件夹npm输入以下进行下载，文件默认在node_modules文件夹内</p><pre><code>npm install bootstrap-select</code></pre><p>导包</p><pre><code>&lt;!-- 导入bootstrap-select.min.css包 --&gt;&lt;link href="node_modules/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" /&gt;&lt;!-- 导入bootstrap-select.min.js包 --&gt;&lt;script src="node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"&gt;&lt;/script&gt;&lt;!-- 编译为中文用defaults-zh_CN.min.js包 --&gt;&lt;script src="node_modules/bootstrap-select/dist/js/i18n/defaults-zh_CN.min.js"&gt;&lt;/script&gt;</code></pre><p>html举例</p><pre><code class="html">&lt;select class="selectpicker"  multiple&gt; //这里 multiple去掉就是单选     &lt;option value="1"&gt;广东省&lt;/option&gt;    &lt;option value="2"&gt;广西省&lt;/option&gt;    &lt;option value="3"&gt;福建省&lt;/option&gt;    &lt;option value="4"&gt;湖南省&lt;/option&gt;    &lt;option value="5"&gt;山东省&lt;/option&gt;&lt;/select&gt;</code></pre><p>最简单效果：</p><p><img src="/2019/09/02/bootstrap-zhi-bootstrap-select-xia-la-duo-xuan-kuang/bootstrap%E4%B9%8Bbootstrap-select%E4%B8%8B%E6%8B%89%E5%A4%9A%E9%80%89%E6%A1%86%5C1567423377216.png" alt=""></p><p>如果还有更多想更改的，可以参考大佬写的：<a href="https://www.cnblogs.com/landeanfen/p/7457283.html" target="_blank" rel="noopener">[好用的bootstrap-select组件]</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> bootstrap </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bootstrap </tag>
+            
+            <tag> jQuery </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue实例的生命周期</title>
       <link href="/2019/08/31/vue-sheng-ming-zhou-qi/"/>
       <url>/2019/08/31/vue-sheng-ming-zhou-qi/</url>
