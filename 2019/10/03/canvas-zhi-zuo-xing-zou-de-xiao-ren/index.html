@@ -4,13 +4,19 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo+github搭建个人博客（超详细图解）, furfur">
-    <meta name="description" content="hexo+github搭建个人博客（超详细图解）B站教学视频链接
-不过视频是基于mac的，这篇文章是基于window
-遇到视频没有出现的bug，已经解决了
-具体流程
-注册github取昵称是注意，这个昵称关乎你的网站的地址  
-下载node">
+    <meta name="keywords" content="canvas制作行走的小人, furfur">
+    <meta name="description" content="制作步骤
+初始化数据
+加载图片方法
+在加载图片方法的回调函数中写加载图片的具体方法，需要对键盘判断
+绘制图片方法
+
+效果图
+
+
+
+代码var Person = function (ctx) {
+            this.ctx = ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +24,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>hexo+github搭建个人博客（超详细图解） | furfur</title>
+    <title>canvas制作行走的小人 | furfur</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -265,13 +271,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        hexo+github搭建个人博客（超详细图解）
+                        canvas制作行走的小人
                     </div>
                 </div>
             </div>
@@ -382,8 +388,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/" target="_blank">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/canvas/" target="_blank">
+                                <span class="chip bg-color">canvas</span>
                             </a>
                         
                     </div>
@@ -394,8 +400,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/hexo/" class="post-category" target="_blank">
-                                hexo
+                            <a href="/categories/canvas/" class="post-category" target="_blank">
+                                canvas
                             </a>
                         
                     </div>
@@ -406,21 +412,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-28
+                    2019-10-03
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        850
+                        462
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        2 分
                     </div>
                     
                 
@@ -436,84 +442,98 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="hexo-github搭建个人博客（超详细图解）"><a href="#hexo-github搭建个人博客（超详细图解）" class="headerlink" title="hexo+github搭建个人博客（超详细图解）"></a>hexo+github搭建个人博客（超详细图解）</h1><p><a href="https://www.bilibili.com/video/av44544186?from=search" target="_blank" rel="noopener">B站教学视频链接</a></p>
-<p>不过视频是基于mac的，这篇文章是基于window</p>
-<p>遇到视频没有出现的bug，已经解决了</p>
-<h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ol>
-<li>注册github取昵称是注意，这个昵称关乎你的网站的地址  <a href="https://github.com/" target="_blank" rel="noopener"></a></li>
-<li>下载node.js和git，node很好下载，但是git要注意，参考这篇文章下载 <a href="https://www.cnblogs.com/zlslch/p/7985285.html" target="_blank" rel="noopener">详细解释</a>，也是很容易的</li>
-<li>通过命令行工具进行操作</li>
-<li>安装hexo框架</li>
-<li>利用hexo生成博客</li>
-<li>github创建仓库，确定地址</li>
-<li>hexo部署到远端</li>
+                <h3 id="制作步骤"><a href="#制作步骤" class="headerlink" title="制作步骤"></a>制作步骤</h3><ol>
+<li>初始化数据</li>
+<li>加载图片方法</li>
+<li>在加载图片方法的回调函数中写加载图片的具体方法，需要对键盘判断</li>
+<li>绘制图片方法</li>
 </ol>
-<h2 id="下载node-js"><a href="#下载node-js" class="headerlink" title="下载node.js"></a>下载node.js</h2><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">nodejs下载网站</a></p>
-<p>下载完直接一直下一步安装就可以</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1.png" alt=""></p>
-<h2 id="下载git"><a href="#下载git" class="headerlink" title="下载git"></a>下载git</h2><p>git安装教程  <a href="https://www.cnblogs.com/zlslch/p/7985285.html" target="_blank" rel="noopener">详细解释</a></p>
-<h2 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h2><p><code>window+R</code>，输入cmd打开命令行工具</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566971400045.png" alt=""></p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566971454384.png" alt=""></p>
-<p>看到以上内容即安装node成功（版本可能不同）</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566971526234.png" alt=""></p>
-<p>看到以上内容即安装npm成功（版本可能不同）</p>
-<p>需要npm下载，但是npm是国外的，可能被墙，速度较慢，可以通过下载淘宝镜像源加快速度，也可以不用，具体方法参照。。。</p>
-<h2 id="全局安装hexo框架"><a href="#全局安装hexo框架" class="headerlink" title="全局安装hexo框架"></a>全局安装hexo框架</h2><p>命令行工具输入<code>npm install -g hexo-cli</code></p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566971744555.png" alt=""></p>
-<p>安装成功如下</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566971789413.png" alt=""></p>
-<p>通过<code>hexo -v</code>验证成功</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566971858635.png" alt=""></p>
-<p>建立一个空的文件夹(可以自己指定目录) <code>mkdir blog</code>，我指定在d目录下建</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566974119628.png" alt=""></p>
-<h2 id="使用hexo生成博客"><a href="#使用hexo生成博客" class="headerlink" title="使用hexo生成博客"></a>使用hexo生成博客</h2><p>用管理员权限打开命令行工具</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566973948330.png" alt=""></p>
-<p>然后<strong>进入你建立的blog目录</strong>，输入<code>hexo init</code></p>
-<p>如果没有报错，正常情况下就开心下载博客框架了，我第一次就是这样</p>
-<p>如果报错如下</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566972452889.png" alt=""></p>
-<p>就是没有 cd 进入blog 目录，输入<code>cd blog</code>即可</p>
-<p>hexo博客安装完成</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566976925461.png" alt=""></p>
-<p>hexo博客自动生成的东西</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566977039979.png" alt=""></p>
-<h2 id="开启博客"><a href="#开启博客" class="headerlink" title="开启博客"></a>开启博客</h2><p>输入<code>hexo s</code></p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566977100757.png" alt=""></p>
-<p>打开浏览器<code>http://localhost:4000</code>预览</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566977197218.png" alt=""></p>
-<p>结束预览 ctrl+c 两次</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566977291046.png" alt=""></p>
-<h2 id="部署到github上"><a href="#部署到github上" class="headerlink" title="部署到github上"></a>部署到github上</h2><p>登录你的github，点击右上角的+，new repository</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566977489239.png" alt=""></p>
-<p><strong>注意用户部署个人博客的github仓库的命名必须符合特定要求才行</strong></p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566977625306.png" alt=""></p>
-<p><strong>配置文件</strong></p>
-<p>在blog打开_config.yml，可以记事本打开，地址是你的仓库地址，复制仓库地址</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566979516095.png" alt=""></p>
-<p>在最底部找到图片相同内容，在deploy输入如下，注意千万不要忘记冒号后面空格，否则报错</p>
-<pre><code># Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: https://github.com/furfur-jiang/furfur-jiang.github.io.git
-  branch: master![1566979358505](hexo-github搭建个人博客（超详细图解）/1566979358505.png)</code></pre><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566979719335.png" alt=""></p>
-<h2 id="将hexo推送到远端"><a href="#将hexo推送到远端" class="headerlink" title="将hexo推送到远端"></a>将hexo推送到远端</h2><p>正常情况下，再输入<code>hexo d</code>就可以进行了</p>
-<p>但是如果不顺利，遇到下面的情况，也是很好解决的</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566980198147.png" alt=""></p>
-<p>解决方法：</p>
-<p>在下面补充你的个人信息，注册github邮箱和github的昵称</p>
-<pre><code>D:\blog&gt; git config --global user.email "2282995214@qq.com"
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/1.png" alt=""></p>
+<p><img src="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/2.png" alt=""></p>
+<p><img src="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/3.png" alt=""></p>
+<p><img src="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/4.png" alt=""></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code class="js">var Person = function (ctx) {
+            this.ctx = ctx || document.querySelector('canvas').getContext('2d');
+            this.src = 'image/04.png'  //使用图片4*4
+            this.canvasWidth = this.ctx.canvas.width
+            this.canvasHeight = this.ctx.canvas.height
+            this.stepSize = 10 //步伐大小
+            this.direction = 0 //起始方向
+            this.stepX = 0     //横向偏移的步数
+            this.stepY = 0     //纵向偏移的步数
+            //初始化数据
+            this.init()
+    }
+    Person.prototype.init = function () {
+            var that = this
+            //加载图片
+            this.loadImage(function (image){
+                that.imageWidth = image.width  //获取图片宽、高
+                that.imageHeight = image.height
+                that.personWidth = that.imageWidth / 4   //获取人物宽高
+                that.personHeight = that.imageHeight / 4
+                that.x0 = that.canvasWidth / 2 - that.personWidth / 2  //获取圆心
+                that.y0 = that.canvasHeight /2 - that.personHeight / 2
 
-D:\blog&gt;git config --global user.name "furfur-jiang"</code></pre><p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566980373027.png" alt=""></p>
-<p>然后弹出一个github的登录窗口，输入内容登录即可</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566980134940.png" alt=""></p>
-<p>最后再次 <code>hexo d</code>即可，然后可以打开你的浏览器，输入你的网站就可以</p>
-<p>例如我的hexo <a href="https://furfur-jiang.github.io/">https://furfur-jiang.github.io/</a>  把昵称换了就可以</p>
-<p>预览</p>
-<p><img src="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/1566980553091.png" alt=""></p>
-<p>完成啦啦啦！</p>
-<p>样式的调整等我以后再出啦</p>
+                //默认绘制
+                that.ctx.drawImage(image,
+                0,0,
+                that.personWidth,that.personHeight,
+                that.x0,that.y0,
+                that.personWidth,that.personHeight)
+            //通过键盘控制行走方向
+            that.index = 0
+            document.onkeydown = function (e) {
+                if(e.keyCode == 40){
+                    //下/前
+                    that.direction = 0
+                    that.stepY++;
+                    that.drawImage(image)
+                }else if (e.keyCode == 37) {
+                    //左
+                    that.direction = 1
+                    that.stepX--;
+                    that.drawImage(image)
+                }else if (e.keyCode == 39) {
+                    //右
+                    that.direction = 2
+                    that.stepX++;
+                    that.drawImage(image)
+                }else if (e.keyCode == 38) {
+                    //上/后
+                    that.direction = 3
+                    that.stepY--;
+                    that.drawImage(image)
+                }
+            }
+        })
+    }
+    //加载图片方法
+    Person.prototype.loadImage = function (callback) {
+        var image = new Image()
+        image.onload = function () {
+            callback &amp;&amp; callback(image)
+        }
+        image.src = this.src
+    }
+    //绘制图片方法
+    Person.prototype.drawImage = function (image) {
+        this.index++;
+        //清除画布
+        this.ctx.clearRect(0,0,this.canvasWidth,this.canvasHeight)
+        //绘图
+        this.ctx.drawImage(image,
+            //定位图像的起始位置
+            this.index *this.personWidth,this.direction *this.personHeight,            
+            this.personWidth,this.personHeight, //截取的宽度和高度
+            this.x0 + this.stepX *this.stepSize , this.y0 + this.stepY *this.stepSize,
+            this.personWidth,this.personHeight);
+            if(this.index &gt;= 3){
+                this.index = 0
+            }
+    }
+new Person();</code></pre>
+<h4 id="image素材"><a href="#image素材" class="headerlink" title="image素材"></a>image素材</h4><p><img src="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/a.png" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -690,9 +710,9 @@ D:\blog&gt;git config --global user.name "furfur-jiang"</code></pre><p><img src=
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《hexo+github搭建个人博客（超详细图解）》
+                    《canvas制作行走的小人》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/" property="cc:attributionName"
                rel="cc:attributionURL">
                 fur
             </a> 采用
@@ -733,7 +753,7 @@ D:\blog&gt;git config --global user.name "furfur-jiang"</code></pre><p><img src=
         repo: 'furfur-jiang.github.io',
         owner: 'furfur-jiang',
         admin: null,
-        id: '2019-08-28T21-15-00',
+        id: '2019-10-03T22-34-28',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -754,91 +774,47 @@ D:\blog&gt;git config --global user.name "furfur-jiang"</code></pre><p><img src=
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/29/jie-jue-npm-bei-qiang-wen-ti/">
+                <a href="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="解决npm被墙问题">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="canvas制作行走的小人">
                         
-                        <span class="card-title">解决npm被墙问题</span>
+                        <span class="card-title">canvas制作行走的小人</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            解决npm别墙问题npm存储包文件的服务器在国外，会被墙，速度慢。
-如果npm的服务器在中国就好了，所以淘宝团队干了这事。
-来自官网：“这是一个完整npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟一次以保证
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-29
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/npm/" class="post-category" target="_blank">
-                                    npm
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/npm/" target="_blank">
-                        <span class="chip bg-color">npm</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/08/28/hexo-github-da-jian-ge-ren-bo-ke-chao-xiang-xi-tu-jie/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="hexo+github搭建个人博客（超详细图解）">
-                        
-                        <span class="card-title">hexo+github搭建个人博客（超详细图解）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            hexo+github搭建个人博客（超详细图解）B站教学视频链接
-不过视频是基于mac的，这篇文章是基于window
-遇到视频没有出现的bug，已经解决了
-具体流程
-注册github取昵称是注意，这个昵称关乎你的网站的地址  
-下载node
+                            制作步骤
+初始化数据
+加载图片方法
+在加载图片方法的回调函数中写加载图片的具体方法，需要对键盘判断
+绘制图片方法
+
+效果图
+
+
+
+代码var Person = function (ctx) {
+            this.ctx = 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-28
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category" target="_blank">
-                                    hexo
+                            <a href="/categories/canvas/" class="post-category" target="_blank">
+                                    canvas
                                 </a>
                             
                             
@@ -849,8 +825,64 @@ D:\blog&gt;git config --global user.name "furfur-jiang"</code></pre><p><img src=
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/" target="_blank">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/canvas/" target="_blank">
+                        <span class="chip bg-color">canvas</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/10/03/canvas-bing-zhuang-tu-ji-qi-xiang-xi-shuo-ming/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="canvas饼状图+解释文本">
+                        
+                        <span class="card-title">canvas饼状图+解释文本</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            canvas饼状图+解释文本制作canvas饼状图步骤
+绘制饼状图
+绘制注释线及其解释文
+绘制小矩形进行数据说明
+
+效果图
+代码        var PieChart = function (ctx) {
+                
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/canvas/" class="post-category" target="_blank">
+                                    canvas
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/canvas/" target="_blank">
+                        <span class="chip bg-color">canvas</span>
                     </a>
                     
                 </div>

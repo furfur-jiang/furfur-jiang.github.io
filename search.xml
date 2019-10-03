@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>canvas制作行走的小人</title>
+      <link href="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/"/>
+      <url>/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/</url>
+      
+        <content type="html"><![CDATA[<h3 id="制作步骤"><a href="#制作步骤" class="headerlink" title="制作步骤"></a>制作步骤</h3><ol><li>初始化数据</li><li>加载图片方法</li><li>在加载图片方法的回调函数中写加载图片的具体方法，需要对键盘判断</li><li>绘制图片方法</li></ol><h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/1.png" alt=""></p><p><img src="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/2.png" alt=""></p><p><img src="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/3.png" alt=""></p><p><img src="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/4.png" alt=""></p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code class="js">var Person = function (ctx) {            this.ctx = ctx || document.querySelector('canvas').getContext('2d');            this.src = 'image/04.png'  //使用图片4*4            this.canvasWidth = this.ctx.canvas.width            this.canvasHeight = this.ctx.canvas.height            this.stepSize = 10 //步伐大小            this.direction = 0 //起始方向            this.stepX = 0     //横向偏移的步数            this.stepY = 0     //纵向偏移的步数            //初始化数据            this.init()    }    Person.prototype.init = function () {            var that = this            //加载图片            this.loadImage(function (image){                that.imageWidth = image.width  //获取图片宽、高                that.imageHeight = image.height                that.personWidth = that.imageWidth / 4   //获取人物宽高                that.personHeight = that.imageHeight / 4                that.x0 = that.canvasWidth / 2 - that.personWidth / 2  //获取圆心                that.y0 = that.canvasHeight /2 - that.personHeight / 2                //默认绘制                that.ctx.drawImage(image,                0,0,                that.personWidth,that.personHeight,                that.x0,that.y0,                that.personWidth,that.personHeight)            //通过键盘控制行走方向            that.index = 0            document.onkeydown = function (e) {                if(e.keyCode == 40){                    //下/前                    that.direction = 0                    that.stepY++;                    that.drawImage(image)                }else if (e.keyCode == 37) {                    //左                    that.direction = 1                    that.stepX--;                    that.drawImage(image)                }else if (e.keyCode == 39) {                    //右                    that.direction = 2                    that.stepX++;                    that.drawImage(image)                }else if (e.keyCode == 38) {                    //上/后                    that.direction = 3                    that.stepY--;                    that.drawImage(image)                }            }        })    }    //加载图片方法    Person.prototype.loadImage = function (callback) {        var image = new Image()        image.onload = function () {            callback &amp;&amp; callback(image)        }        image.src = this.src    }    //绘制图片方法    Person.prototype.drawImage = function (image) {        this.index++;        //清除画布        this.ctx.clearRect(0,0,this.canvasWidth,this.canvasHeight)        //绘图        this.ctx.drawImage(image,            //定位图像的起始位置            this.index *this.personWidth,this.direction *this.personHeight,                        this.personWidth,this.personHeight, //截取的宽度和高度            this.x0 + this.stepX *this.stepSize , this.y0 + this.stepY *this.stepSize,            this.personWidth,this.personHeight);            if(this.index &gt;= 3){                this.index = 0            }    }new Person();</code></pre><h4 id="image素材"><a href="#image素材" class="headerlink" title="image素材"></a>image素材</h4><p><img src="/2019/10/03/canvas-zhi-zuo-xing-zou-de-xiao-ren/a.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> canvas </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> canvas </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>canvas饼状图+解释文本</title>
       <link href="/2019/10/03/canvas-bing-zhuang-tu-ji-qi-xiang-xi-shuo-ming/"/>
       <url>/2019/10/03/canvas-bing-zhuang-tu-ji-qi-xiang-xi-shuo-ming/</url>
