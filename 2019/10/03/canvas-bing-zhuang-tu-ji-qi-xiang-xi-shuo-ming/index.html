@@ -4,11 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="bootstrap之bootstrap-select下拉多选框, furfur">
-    <meta name="description" content="bootstrap之bootstrap-select下拉多选框bootstrap-select的github链接
-官网效果展示：
+    <meta name="keywords" content="canvas饼状图+解释文本, furfur">
+    <meta name="description" content="canvas饼状图+解释文本制作canvas饼状图步骤
+绘制饼状图
+绘制注释线及其解释文
+绘制小矩形进行数据说明
 
-使用方法官网采用直接链接的方式&amp;lt;!-- 导入bootstrap-select.min.css包 --&amp;">
+效果图
+代码        var PieChart = function (ctx) {
+                ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>bootstrap之bootstrap-select下拉多选框 | furfur</title>
+    <title>canvas饼状图+解释文本 | furfur</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -122,7 +126,7 @@
         <div class="logo-name">furfur</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            studyHard
             
         </div>
     </div>
@@ -263,13 +267,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        bootstrap之bootstrap-select下拉多选框
+                        canvas饼状图+解释文本
                     </div>
                 </div>
             </div>
@@ -380,12 +384,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/bootstrap/" target="_blank">
-                                <span class="chip bg-color">bootstrap</span>
-                            </a>
-                        
-                            <a href="/tags/jQuery/" target="_blank">
-                                <span class="chip bg-color">jQuery</span>
+                            <a href="/tags/canvas/" target="_blank">
+                                <span class="chip bg-color">canvas</span>
                             </a>
                         
                     </div>
@@ -396,8 +396,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/bootstrap/" class="post-category" target="_blank">
-                                bootstrap
+                            <a href="/categories/canvas/" class="post-category" target="_blank">
+                                canvas
                             </a>
                         
                     </div>
@@ -408,21 +408,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-02
+                    2019-10-03
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        407
+                        584
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        3 分
                     </div>
                     
                 
@@ -438,36 +438,107 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="bootstrap之bootstrap-select下拉多选框"><a href="#bootstrap之bootstrap-select下拉多选框" class="headerlink" title="bootstrap之bootstrap-select下拉多选框"></a>bootstrap之bootstrap-select下拉多选框</h1><p><a href="https://github.com/snapappointments/bootstrap-select" target="_blank" rel="noopener">bootstrap-select的github链接</a></p>
-<p>官网效果展示：</p>
-<p><img src="https://user-images.githubusercontent.com/2874325/38997831-97e12bbe-43ab-11e8-85f5-b8c05d91c7b1.gif" alt=""></p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="官网采用直接链接的方式"><a href="#官网采用直接链接的方式" class="headerlink" title="官网采用直接链接的方式"></a>官网采用直接链接的方式</h3><pre><code>&lt;!-- 导入bootstrap-select.min.css包 --&gt;
-&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/css/bootstrap-select.min.css"&gt;
-
-&lt;!-- 导入bootstrap-select.min.js包 --&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/js/bootstrap-select.min.js"&gt;&lt;/script&gt;
-
-&lt;!-- 编译为中文用defaults-zh_CN.min.js包 --&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/js/i18n/defaults-zh_CN.min.js"&gt;&lt;/script&gt;</code></pre><h3 id="npm下载方式导包"><a href="#npm下载方式导包" class="headerlink" title="npm下载方式导包"></a>npm下载方式导包</h3><p>在指定文件夹npm输入以下进行下载，文件默认在node_modules文件夹内</p>
-<pre><code>npm install bootstrap-select</code></pre><p>导包</p>
-<pre><code>&lt;!-- 导入bootstrap-select.min.css包 --&gt;
-&lt;link href="node_modules/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" /&gt;
-
-&lt;!-- 导入bootstrap-select.min.js包 --&gt;
-&lt;script src="node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"&gt;&lt;/script&gt;
-
-&lt;!-- 编译为中文用defaults-zh_CN.min.js包 --&gt;
-&lt;script src="node_modules/bootstrap-select/dist/js/i18n/defaults-zh_CN.min.js"&gt;&lt;/script&gt;</code></pre><p>html举例</p>
-<pre><code class="html">&lt;select class="selectpicker"  multiple&gt; //这里 multiple去掉就是单选
-     &lt;option value="1"&gt;广东省&lt;/option&gt;
-    &lt;option value="2"&gt;广西省&lt;/option&gt;
-    &lt;option value="3"&gt;福建省&lt;/option&gt;
-    &lt;option value="4"&gt;湖南省&lt;/option&gt;
-    &lt;option value="5"&gt;山东省&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-<p>最简单效果：</p>
-<p><img src="/2019/09/02/bootstrap-zhi-bootstrap-select-xia-la-duo-xuan-kuang/bootstrap%E4%B9%8Bbootstrap-select%E4%B8%8B%E6%8B%89%E5%A4%9A%E9%80%89%E6%A1%86%5C1567423377216.png" alt=""></p>
-<p>如果还有更多想更改的，可以参考大佬写的：<a href="https://www.cnblogs.com/landeanfen/p/7457283.html" target="_blank" rel="noopener">[好用的bootstrap-select组件]</a></p>
+                <h1 id="canvas饼状图-解释文本"><a href="#canvas饼状图-解释文本" class="headerlink" title="canvas饼状图+解释文本"></a>canvas饼状图+解释文本</h1><h2 id="制作canvas饼状图步骤"><a href="#制作canvas饼状图步骤" class="headerlink" title="制作canvas饼状图步骤"></a>制作canvas饼状图步骤</h2><ol>
+<li>绘制饼状图</li>
+<li>绘制注释线及其解释文</li>
+<li>绘制小矩形进行数据说明</li>
+</ol>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="/2019/10/03/canvas-bing-zhuang-tu-ji-qi-xiang-xi-shuo-ming/1.png" alt=""></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code class="js">        var PieChart = function (ctx) {
+                this.ctx = ctx || document.querySelector('canvas').getContext('2d');
+                this.w = this.ctx.canvas.width        //获取canvas宽度
+                this.h = this.ctx.canvas.height        //获取canvas高度
+                this.x0 = this.w/2 + 60             //获取原点x    
+                this.y0 = this.h/2                    //获取原点y
+                this.radius = 150                    //获取半径
+                this.outLine = 20        //圆盘外面的线长度
+                this.rectW = 30            //小矩形的宽度
+                this.rectH = 16            //小矩形的高度
+                this.space = 20            //小矩形距离边框
+            }
+        //传入数据
+            PieChart.prototype.init = function(data) {
+                this.drawPie(data)
+            }
+        //画饼状图
+            PieChart.prototype.drawPie = function (data) {
+                var that = this
+                var angleList = this.transformAngle(data)    //数组
+                var startAngle = 0
+                angleList.forEach(function (item,i){
+                    var endAngle = startAngle + item.angle
+                    that.ctx.beginPath()
+                    that.ctx.moveTo(that.x0, that.y0)
+                    that.ctx.arc(that.x0, that.y0, that.radius, startAngle, endAngle);
+                    var color = that.ctx.fillStyle = that.getRandomColor()
+                    that.ctx.stroke()
+                    that.ctx.fill();
+                    that.drawTitle(startAngle, item.angle, color, item.title)
+                    that.drawDesc(i,item.title)
+                    startAngle = endAngle
+                })
+            }
+        //画注释线及其解释
+            PieChart.prototype.drawTitle = function (startAngle,angle,color,title) {
+                var edge = this.radius + this.outLine
+                var edgeX = Math.cos(startAngle + angle / 2) * edge
+                var edgeY = Math.sin(startAngle + angle / 2) * edge
+                var outX = this.x0 + edgeX
+                var outY = this.y0 + edgeY
+                this.ctx.beginPath()
+                this.ctx.moveTo(this.x0 ,this.y0);
+                this.ctx.lineTo(outX,outY);
+                this.ctx.strokeStyle = color;
+                this.ctx.font = '14px Microsoft YaHei';
+                var textWidth = this.ctx.measureText(title).width
+                if(outX &gt; this.x0){
+                    this.ctx.lineTo(outX + textWidth , outY)
+                    this.ctx.textAlign = 'left'
+                }else{
+                    this.ctx.lineTo(outX - textWidth , outY)
+                    this.ctx.textAlign = 'right'
+                }
+                this.ctx.stroke();
+                this.ctx.textBaseline = 'bottom'
+                this.ctx.fillText(title, outX, outY)
+            }
+        //画小矩形说明
+            PieChart.prototype.drawDesc = function (index,title) {
+                this.ctx.fillRect(this.space,this.space + index * (this.rectH + 10),this.rectW,this.rectH)
+                this.ctx.beginPath()
+                this.ctx.textAlign = 'left'
+                this.ctx.textBaseline = 'top';
+                this.ctx.font = '12px Microsoft YaHei'
+                this.ctx.fillText(title,this.space + this.rectW + 10 ,this.space + index * (this.rectH + 10))
+            };
+        //将数据转换为弧度
+            PieChart.prototype.transformAngle = function (data) {
+                var total = 0
+                data.forEach(function(item, i){
+                    total += item.num
+                })
+                data.forEach(function(item, i){
+                    var angle = item.num / total *Math.PI *2
+                    item.angle = angle
+                })
+                return data
+            }
+        //生成随机颜色
+            PieChart.prototype.getRandomColor = function () {
+                var r = Math.floor(Math.random() * 256)
+                var g = Math.floor(Math.random() * 256)
+                var b = Math.floor(Math.random() * 256)
+                return 'rgb(' + r +','+ g + ','+ b +')';
+            }
+        //数据
+        var data = [
+            {title: '15-20岁',num: 6},
+            {title: '20-25岁',num: 30},
+            {title: '25-30岁',num: 10},
+            {title: '30以上',num: 8}
+        ];
+        var pirChart = new PieChart();
+        pirChart.init(data)</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -644,9 +715,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《bootstrap之bootstrap-select下拉多选框》
+                    《canvas饼状图+解释文本》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/02/bootstrap-zhi-bootstrap-select-xia-la-duo-xuan-kuang/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/03/canvas-bing-zhuang-tu-ji-qi-xiang-xi-shuo-ming/" property="cc:attributionName"
                rel="cc:attributionURL">
                 fur
             </a> 采用
@@ -687,7 +758,7 @@
         repo: 'furfur-jiang.github.io',
         owner: 'furfur-jiang',
         admin: null,
-        id: '2019-09-02T19-05-28',
+        id: '2019-10-03T19-05-41',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -713,34 +784,38 @@
                 <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2019/09/02/bootstrap-zhi-bootstrap-select-xia-la-duo-xuan-kuang/">
+                <a href="/2019/10/03/canvas-bing-zhuang-tu-ji-qi-xiang-xi-shuo-ming/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="bootstrap之bootstrap-select下拉多选框">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="canvas饼状图+解释文本">
                         
-                        <span class="card-title">bootstrap之bootstrap-select下拉多选框</span>
+                        <span class="card-title">canvas饼状图+解释文本</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            bootstrap之bootstrap-select下拉多选框bootstrap-select的github链接
-官网效果展示：
+                            canvas饼状图+解释文本制作canvas饼状图步骤
+绘制饼状图
+绘制注释线及其解释文
+绘制小矩形进行数据说明
 
-使用方法官网采用直接链接的方式&lt;!-- 导入bootstrap-select.min.css包 --&
+效果图
+代码        var PieChart = function (ctx) {
+                
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-02
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/bootstrap/" class="post-category" target="_blank">
-                                    bootstrap
+                            <a href="/categories/canvas/" class="post-category" target="_blank">
+                                    canvas
                                 </a>
                             
                             
@@ -751,12 +826,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/bootstrap/" target="_blank">
-                        <span class="chip bg-color">bootstrap</span>
-                    </a>
-                    
-                    <a href="/tags/jQuery/" target="_blank">
-                        <span class="chip bg-color">jQuery</span>
+                    <a href="/tags/canvas/" target="_blank">
+                        <span class="chip bg-color">canvas</span>
                     </a>
                     
                 </div>
@@ -928,7 +999,7 @@ beforeCreate
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">2.1k</span>
+                <span class="white-color">2.3k</span>
             
 
             
